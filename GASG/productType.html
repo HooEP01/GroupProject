@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <head>
     <title>Logitech Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
@@ -59,10 +61,24 @@
             display: table;
         }
 
+        .my-col{
+            width:80%;
+            position:relative;
+            left:10%;
+            margin-bottom:50px;
+        }
+
+        @media (min-width: 768px){
+            .my-col{
+                width:100%;
+                position:initial;
+            }
+        }
+
         .title {
             color: grey;
             font-size: x-large;
-            margin-left:240px;
+            margin:auto;
         }
 
         h2,h3{
@@ -162,7 +178,7 @@
 <body>
     <h2>Our Products</h2>
     <div class="row">
-        <div class="column">
+        <div class="col-md-6 my-col">
             <div class="card">
                 <img src="https://image.freepik.com/free-photo/gamer-workspace_127657-18683.jpg" alt="Jane"
                     style="width:100%">
@@ -179,7 +195,7 @@
             </div>
         </div>
 
-        <div class="column">
+        <div class="col-md-6 my-col">
             <div class="card">
                 <img src="https://image.freepik.com/free-photo/workplace-business-modern-male-accessories-laptop-black-background_155003-3944.jpg"
                     alt="Mike" style="width:100%">

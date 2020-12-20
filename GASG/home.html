@@ -1,7 +1,10 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <title>Logitech Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -79,7 +82,6 @@
     <section id="story">
         <div class="container">
             <div class="row">
-                <img class="w3-image w3-round-large" src="images/team.jpg" alt="team">
                 <div class="col-md-6">
                     <h1><b>Our Story</b></h1>
                     <p>A Swiss company focused on innovation and quality, Logitech designs
@@ -91,6 +93,9 @@
                         design and our global reach. For each of our products, we focus on how our customers connect and
                         interact with the digital world. We keep design at the center of everything we create, in every
                         team and every discipline, to create truly unique and meaningful experiences.</p>
+                </div>
+                <div class="col-md-6">
+                    <img class="w3-image w3-round-large" src="images/team.jpg" alt="team">
                 </div>
             </div>
         </div>
@@ -104,9 +109,9 @@
 
             <!--Controls-->
             <div class="controls-top">
-                <a class="black-text" href="#multi-item-example" data-slide="prev"><i
+                <a id="top" class="black-text" href="#multi-item-example" data-slide="prev"><i
                         class="fa fa-angle-left fa-3x pr-3"></i></a>
-                <a class="black-text" href="#multi-item-example" data-slide="next"><i
+                <a id="bottom"class="black-text" href="#multi-item-example" data-slide="next"><i
                         class="fa fa-angle-right fa-3x pl-3"></i></a>
             </div>
             <!--/.Controls-->
@@ -199,7 +204,7 @@
     <!---About--->
     <section id="about">
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-md-6">
                     <h2>About Us</h2>
                     <div class="about-content">Logitech focused on innovation and quality, Logitech designs personal
@@ -375,7 +380,7 @@
             <b>
                 <p class="text-center">HIGHLIGHTS FROM THE FAMOUS ONE</p>
             </b>
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-md-4 text-center">
                     <div class="profile">
                         <img src="images/members/pewdiepie.jpg" class="user">
