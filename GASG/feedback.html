@@ -1,8 +1,5 @@
-<!DOCTYPE html>
 <head>
     <title>Logitech Website</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
@@ -11,6 +8,15 @@
 
     <style>
         /*---Navigation---*/
+        body {
+            background-image: url('images/e.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            background-position: top;
+            color: azure;
+        }
+
         #nav-bar {
             position: sticky;
             top: 0;
@@ -49,94 +55,17 @@
             font-size: 16px;
         }
 
-        .container {
-            padding:10px;
-            margin:5px;
-        }
-
-        .container::after,
-        .row::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-
-        .my-col{
-            width:80%;
-            position:relative;
-            left:10%;
-            margin-bottom:50px;
-        }
-
-        @media (min-width: 768px){
-            .my-col{
-                width:100%;
-                position:initial;
-            }
-        }
-
-        .title {
-            color: grey;
-            font-size: x-large;
-            margin:auto;
-        }
-
-        h2,h3{
+        h1 {
             text-align: center;
-            color: #555 !important;
+            margin-top:10px;
+            margin-bottom:20px;
+        }
+
+        .feedback {
             padding: 10px;
+            margin: 10px;
         }
 
-        h2::after {
-            content: '';
-            background: #4ddbff;
-            display: block;
-            height: 3px;
-            width: 170px;
-            margin: 20px auto 5px;
-        }
-
-        h3::after {
-            content: '';
-            background: #4ddbff;
-            display: block;
-            height: 3px;
-            width: 170px;
-            margin: 20px auto 5px;
-        }
-
-        .column {
-            width: 50%;
-            padding: 0 10px;
-        }
-
-        .card {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            margin: auto;
-        }
-
-        .button {
-            border: none;
-            outline: 0;
-            display: inline-block;
-            padding: 8px;
-            color: white;
-            background-color: #000;
-            text-align: center;
-            cursor: pointer;
-            width: 100%;
-        }
-
-        .button:hover {
-            background-color: #555;
-        }
-
-        @media screen and (max-width: 650px) {
-            .column {
-                width: 100%;
-                display: block;
-            }
-        }
     </style>
 </head>
 
@@ -172,57 +101,90 @@
         </div>
     </nav>
 </section>
-<br>
+
 <!---Your Content--->
+<br>
+<section id="feedback_contact">
+    <div style="margin-right:30%;margin-left:30%; border: 3px solid rgb(0, 255, 255);background-color: black;">
+        <form>
+            <fieldset id="feedback" style=margin-left:5%>
+                <legend>
+                    <h1><b>Feedback</b></h1>
+                </legend>
 
-<body>
-    <h2>Our Products</h2>
-    <div class="row">
-        <div class="col-md-6 my-col">
-            <div class="card">
-                <img src="https://image.freepik.com/free-photo/gamer-workspace_127657-18683.jpg" alt="Jane"
-                    style="width:100%">
-                <div class="container">
-                    <h3>Computer Accessories</h3>
-                    <li class="title">Keyboards</li>
-                    <li class="title">Mice</li>
-                    <li class="title">Headsets</li>
-                    <a href="pcAccessories.html">
-                        <br><br>
-                        <p><button class="button">Visit Our Product</button></p>
-                    </a>
-                </div>
-            </div>
-        </div>
+                <ol type="A" start="1">
+                <label for="feedback/complain"><b>
+                        <li><h5>Do you wish to give us a feedback/complain? </h5></li>
+                    </b></label><br>
+                <label for="feedback">Feedback</label>
+                <input type="radio" name="choice" id="q1" value="feedback" required="">
+                <label for="complain">   Complain</label>
+                <input type="radio" name="choice" id="q1" value="complain"><br>
+                <br>
 
-        <div class="col-md-6 my-col">
-            <div class="card">
-                <img src="https://image.freepik.com/free-photo/workplace-business-modern-male-accessories-laptop-black-background_155003-3944.jpg"
-                    alt="Mike" style="width:100%">
-                <div class="container">
-                    <h3>Mobile Devices</h3>
-                    <li class="title">Ipad Keyboard</li>
-                    <li class="title">Ipad Accessories</li>
-                    <li class="title">Smartphone Accessories</li>
+                <label for="feedback/complain"><b>
+                    <li><h5>Do you find what you needed? </h5></li>
+                    </b></label><br>
+                <label for="Yes">Yes</label>
+                <input type="radio" name="yes" id="Yes" value="Yes" required="">
+                <label for="No">No</label>
+                <input type="radio" name="yes" id="No" value="No"><br>
+                <br>
+
+                <label for="comment"><b>
+                    <li><h5>The questions/problems you have:</h5></li>
+                    </b></label> <br>
+                    <textarea rows="4" cols="50" placeholder="State your questions or problem here"></textarea>
+                <br><br>
+
+                <label for="ordertype"><b>
+                    <li><h5>What type of product you usually get?</h5></li>
+                    </b></label><br>
+                <select name="ordertype" id="ordertype">
+                    <option value="type1" selected="selected">Mouse</option>
+                    <option value="type2">Keyboards</option>
+                    <option value="type3">Headsets</option>
+                    <option value="type4">Streaming</option>
+                    <option value="type4">Others</option>
+                </select><br><br>
+
+                <label for="Problem"><b>
+                    <li><h5>Where do you encounter the problem?</h5></li>
+                    </b></label><br>
+                <input name="text" id="Problem" list="problemSection">
+                <datalist id="problemSection">
+                    <option value="attitude :"></option>
+                    <option value="service :"></option>
+                    <option value="hygiene :"></option>
+                    <option value="noise :"></option>
+                    <option value="quality :"></option>
+                    <option value="other :"></option>
+                </datalist><br>
+                <br>
+                <label for="ordertype"><b>
+                    <li><h5>Please clip the image of your problem if you have it</h5></li>
+                </b></label>
+                <p><input type="file" multiple>Image: JPEG/PNG</p><br>
+
+                <div class="form-line" data-type="control_radio">
+                    <label for="input"><b>
+                        <li><h5>How likely are you to recommend us to a friend or colleague? </h5></li>
+                        </b></label>
+                    <p>
+                        <label class="sliderLabel">0</label>
+                        <input name="quality" id="quality" type="range" value="5" min="0" max="10" step="1">
+                        <label class="sliderLabel">10</label>
+                    </p>
                     <br><br>
-                    <a href="https://www.youtube.com/">
-                        <p><button class="button">Visit Our Product</button></p>
-                    </a>
                 </div>
-            </div>
-        </div>
+
+                <div style="text-align: center;"><input type="submit" style="right:0;" value="Submit"><br></div>
+            </fieldset>
+        </form>
     </div>
-</body>
-
-
-<section id="#">
-    <br>
-    <br>
-    <br>
 </section>
+<br>
 
-
-<!-- Footer -->
 <!-- Footer -->
 <footer class="page-footer font-small unique-color-dark">
 
@@ -271,7 +233,8 @@
                 </hr>
                 <p>The company develops and markets personal peripherals for PC navigation, video communication and
                     collaboration, music and smart homes. This includes products like keyboards, mice, tablet
-                    accessories, webcams, Bluetooth speakers, universal remotes and more. </p>
+                    accessories, webcams, Bluetooth speakers, universal remotes and more. Its name is derived from
+                    logiciel, the French word for software. </p>
 
             </div>
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -336,5 +299,3 @@
         <a href="file:///C:/xampp/htdocs/ASG/index.html"> Logitech.com</a>
     </div>
 </footer>
-</body>
-</html>
