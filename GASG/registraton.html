@@ -1,7 +1,10 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <title>Logitech Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
@@ -161,7 +164,49 @@
 <!-----Navigation---->
 
 <body>
-    <section id="nav-bar">
+    <script>
+
+        function validateForm() {
+            var a = document.forms["myForm"]["firstName"].value;
+            if (a == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+             var b = document.forms["myForm"]["secondName"].value;
+            if (b == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+            var c = document.forms["myForm"]["password"].value;
+            if (c == "") {
+                alert("Password must be filled out.")
+                return false;
+            }
+             var d = document.forms["myForm"]["password2"].value;
+            if (d == c) {
+                
+            }else{
+                alert("Password not the same.")
+                return false;
+            }
+        
+             var g = document.forms["myForm"]["phone"].value;
+            if (g == "") {
+                alert("Password must be filled out.")
+                return false;
+            }
+             var h = document.forms["myForm"]["answer"].value;
+            if (h == "") {
+                 alert("Answer must be filled out");
+                return false;
+            }
+            
+        }
+
+    </script>
+
+    <!--header start-->
+    <header id="nav-bar">
         <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="#"><img src="images/logo.png"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -174,24 +219,24 @@
                         <a class="nav-link" href="home.html">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">ABOUT US</a>
+                        <a class="nav-link" href="home.html #about">ABOUT US</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">PRODUCTS</a>
+                        <a class="nav-link" href="productType.html">PRODUCTS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#team">OUR TEAM</a>
+                        <a class="nav-link" href="home.html #team">OUR TEAM</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#testimonials">TESTIMONIALS</a>
+                        <a class="nav-link" href="registraton.html">Registration</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">CONTACT</a>
+                        <a class="nav-link" href="feedback.html">Feedback</a>
                     </li>
                 </ul>
             </div>
         </nav>
-    </section>
+    </header>
 
     <!---Your Content--->
     <div class="container register">
@@ -209,17 +254,18 @@
                         <h3 class="register-heading">Registration Form</h3>
                         <div class="row register-form">
                             <div class="col-md-6">
+                                <form name="myForm" action="" method="post" onsubmit="return validateForm()">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="First Name *" value="" />
+                                    <input type="text" class="form-control" id="firstName"  name="firstName" placeholder="First Name *" value="" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Last Name *" value="" />
+                                    <input type="text" class="form-control" id="secondName"  name="secondName" placeholder="Last Name *" value="" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" placeholder="Password *" value="" />
+                                    <input type="password" class="form-control" id="password"  name="password" placeholder="Password *" value="" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" placeholder="Confirm Password *"
+                                    <input type="password" class="form-control" id="password2"  name="password2" placeholder="Confirm Password *"
                                         value="" />
                                 </div>
                                 <div class="form-group">
@@ -237,11 +283,11 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Your Email *" value="" />
+                                    <input type="email" class="form-control" id="email"  name="email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Your Email *" value="" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" minlength="10" maxlength="10" name="txtEmpPhone"
-                                        class="form-control" placeholder="Your Phone *" value="" />
+                                    <input type="tel" minlength="10" maxlength="10" name="txtEmpPhone"
+                                        class="form-control" id="phone"  name="phone" placeholder="Your Phone *" value="" />
                                 </div>
                                 <div class="form-group">
                                     <select class="form-control">
@@ -253,11 +299,12 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Enter Your Answer *"
+                                    <input type="text" class="form-control" id="answer"  name="answer" placeholder="Enter Your Answer *"
                                         value="" />
                                 </div>
                                 <input type="submit" class="btnRegister" value="Register" />
                             </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -380,6 +427,19 @@
             <a href="file:///C:/xampp/htdocs/ASG/index.html"> Logitech.com</a>
         </div>
     </footer>
+
+    <!-- jquery plugins here-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    
+    <!-- JavaScript with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    
+    <!--fontawesome-->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 
 </html>
